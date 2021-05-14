@@ -41,6 +41,7 @@ class ListItemController(private val wallpaper: Wallpaper) : Initializable {
         tfImageName.text = wallpaper.imageName
         imageView.image = Image(wallpaper.imageFile.toUri().toURL().toExternalForm())
         checkBox.selectedProperty().addListener { _, _, value -> wallpaper.selected = value }
+        checkBox.isSelected = wallpaper.selected
     }
 
     @FXML

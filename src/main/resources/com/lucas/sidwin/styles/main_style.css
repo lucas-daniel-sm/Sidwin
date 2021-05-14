@@ -3,7 +3,7 @@
     -fx-text-fill: -fx-var-text-color;
     -fx-fill: -fx-var-text-color;
 
-    -fx-var-background-color: rgb(43, 43, 43);
+    -fx-var-background-color: rgba(43, 43, 43, 0.95);
     -fx-var-primary-color: #3e859f;
     -fx-var-primary-color-transparent: rgba(62, 133, 159, 0.2);
     -fx-var-primary-color-disable: #7198a4;
@@ -14,27 +14,46 @@
             center 50% 50%,
             radius 50%,
             -fx-var-primary-color,
-            -fx-var-background-color
+            transparent
     );
 }
 
 .root {
     -fx-background-color: -fx-var-background-color;
-    /*-fx-padding: 10 20 10 20;*/
     -fx-border-width: 2;
     -fx-border-radius: 0;
     -fx-border-color: -fx-var-primary-color;
 }
 
-.pane {
+.list-item {
     -fx-background-color: transparent;
+    -fx-border-width: 0 0 4 0;
+    -fx-border-radius: 0;
+    -fx-border-color: -fx-var-radial-gradient-primary-color;
+    -fx-padding: 5 0 10 0;
+}
+
+.last-item {
+    -fx-border-width: 0;
+}
+
+.pane { -fx-background-color: transparent; }
+
+.menu-pane {
+    -fx-padding: 2 2 2 2;
 }
 
 .menu-bar {
-    -fx-border-width: 0 0 2 0;
-    -fx-border-color: rgba(62, 133, 159, 0.49);
-    -fx-padding: 0;
+    -fx-border-width: 0;
+    -fx-border-color: transparent;
     -fx-background-color: transparent;
+}
+
+.menu-separator > .line {
+    -fx-background-color: transparent;
+    -fx-border-style: solid;
+    -fx-border-color: -fx-var-primary-color;
+    -fx-border-width: 0 0 2 0;
 }
 
 .context-menu {
@@ -49,15 +68,7 @@
     -fx-background-color: -fx-var-primary-color;
 }
 
-.list-cell {
-    -fx-background-color: transparent;
-}
-
-.clipped-container {
-    -fx-background-color: transparent;
-}
-
-.virtual-flow {
+.list-cell, .clipped-container, .virtual-flow, .menu-separator, .scroll-bar > .track {
     -fx-background-color: transparent;
 }
 
@@ -70,10 +81,6 @@
 .scroll-bar {
     -fx-background-color: rgba(255, 255, 255, 0.05);
     -fx-var-arrow-background-color: -fx-var-primary-color;
-}
-
-.scroll-bar .track {
-    -fx-background-color: transparent;
 }
 
 .scroll-bar .thumb  {
@@ -110,6 +117,21 @@
     -fx-background-color: rgba(0, 0, 0, 0.3);
 }
 
+.close-button {
+    -fx-border-width: 0;
+    -fx-content-display: graphic-only;
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+}
+
+.close-button > .ikonli-font-icon {
+    -fx-icon-color: rgba(255, 0, 0, 0.8);
+    -fx-icon-size: 20pt;
+    -fx-padding: 0;
+}
+
+.close-button:hover > .ikonli-font-icon { -fx-icon-color: #ff0000; }
+
 .text-field {
     -fx-background-color: rgba(0, 0, 0, 0.3);
     -fx-background-radius: 0;
@@ -130,6 +152,7 @@
     -fx-border-color: -fx-var-primary-color;
     -fx-padding: 3;
 }
+
 .check-box .box { -fx-background-color: transparent; }
 
 .check-box .mark {
@@ -137,14 +160,8 @@
     -fx-padding: 6;
 }
 
-.check-box:selected {
-    -fx-border-color: #00ff00;
-}
+.check-box:selected { -fx-border-color: #00ff00; }
 
-.check-box:selected .mark {
-    -fx-background-color: #00ff00;
-}
+.check-box:selected .mark { -fx-background-color: #00ff00; }
 
-.check-box:hover {
-    -fx-cursor: hand;
-}
+.check-box:hover { -fx-cursor: hand; }

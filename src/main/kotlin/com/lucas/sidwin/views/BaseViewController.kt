@@ -14,20 +14,24 @@ import java.net.URL
 import java.util.*
 import kotlin.system.exitProcess
 
-
 class BaseViewController : Initializable {
 
     @FXML
     private lateinit var listView: ListView<Wallpaper>
 
     override fun initialize(location: URL?, resources: ResourceBundle?) {
+
         listView.items.addAll(FileHandler.wallpapers)
+
+        val lastItem = listView.items.last()
+
         listView.cellFactory = Callback {
             object : ListCell<Wallpaper>() {
                 override fun updateItem(item: Wallpaper?, empty: Boolean) {
                     super.updateItem(item, empty)
                     text = null
                     graphic = if (empty || item == null) null else loadItem(item)
+                    if(item == lastItem) graphic.styleClass.add("last-item")
                 }
             }
         }
