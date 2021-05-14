@@ -9,6 +9,9 @@
   Windos 10 (As imagens que aparecem na tela de bloqueio) para que
   você possa salvá-las de forma fácil e rápida.
 
+![](readme-assets/Captura%20de%20tela%20-%20Sidwin.png)
+> Janela do aplicativo.
+
 ---
 
 ### Configurações do ambiente:

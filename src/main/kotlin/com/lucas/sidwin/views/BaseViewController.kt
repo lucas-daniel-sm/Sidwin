@@ -9,15 +9,21 @@ import javafx.fxml.Initializable
 import javafx.scene.Node
 import javafx.scene.control.ListCell
 import javafx.scene.control.ListView
+import javafx.scene.layout.HBox
+import javafx.scene.layout.Pane
+import javafx.stage.Stage
 import javafx.util.Callback
 import java.net.URL
 import java.util.*
 import kotlin.system.exitProcess
 
-class BaseViewController : Initializable {
+class BaseViewController(val stage: Stage) : Initializable {
 
     @FXML
     private lateinit var listView: ListView<Wallpaper>
+
+    @FXML
+    private lateinit var topBarUnusableArea: Pane
 
     override fun initialize(location: URL?, resources: ResourceBundle?) {
 
@@ -35,6 +41,8 @@ class BaseViewController : Initializable {
                 }
             }
         }
+
+        moveWindowListener()
     }
 
     private fun loadItem(wallpaper: Wallpaper): Node {
@@ -42,6 +50,21 @@ class BaseViewController : Initializable {
         val fxmlLoader = FXMLLoader(resource)
         fxmlLoader.controllerFactory = Callback { ListItemController(wallpaper) }
         return fxmlLoader.load()
+    }
+
+    private fun moveWindowListener() {
+        var xOffset = 0.0
+        var yOffset = 0.0
+
+        topBarUnusableArea.setOnMousePressed {
+            xOffset = stage.x - it.screenX
+            yOffset = stage.y - it.screenY
+        }
+
+        topBarUnusableArea.setOnMouseDragged {
+            stage.x = it.screenX + xOffset
+            stage.y = it.screenY + yOffset
+        }
     }
 
     @FXML

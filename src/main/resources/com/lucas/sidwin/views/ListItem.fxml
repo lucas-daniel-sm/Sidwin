@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
@@ -9,26 +10,44 @@
 <?import javafx.scene.layout.VBox?>
 
 <HBox minHeight="-Infinity" minWidth="-Infinity" spacing="10.0" styleClass="list-item" stylesheets="@../styles/main_style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lucas.sidwin.views.ListItemController">
-    <ImageView fx:id="imageView" fitHeight="300.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" />
-    <VBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" HBox.hgrow="ALWAYS">
-        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
-            <Label text="Tamanho: " />
-            <Label fx:id="lblImageSize" layoutX="10.0" layoutY="10.0" text="1920x1080" />
-        </HBox>
-        <HBox layoutX="10.0" layoutY="85.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
-            <Label text="Bytes: " />
-            <Label fx:id="lblImageBytes" layoutX="10.0" layoutY="10.0" text="400k" />
-        </HBox>
-        <HBox layoutX="10.0" layoutY="110.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
-            <Label text="Orientação: " />
-            <Label fx:id="lblOrientation" layoutX="10.0" layoutY="10.0" text="Retrato" />
-        </HBox>
-    </VBox>
-    <VBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="200.0">
-        <CheckBox fx:id="checkBox" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" />
-        <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" VBox.vgrow="ALWAYS">
-            <TextField fx:id="tfImageName" maxWidth="1.7976931348623157E308" />
-        </VBox>
-        <Button maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#save" prefHeight="30.0" text="SALVAR" />
-    </VBox>
+   <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="400.0">
+      <children>
+          <ImageView fx:id="imageView" fitHeight="300.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" />
+      </children>
+   </HBox>
+   <VBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+      <children>
+         <HBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="330.0" spacing="10.0" VBox.vgrow="ALWAYS">
+            <children>
+                <VBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" HBox.hgrow="ALWAYS">
+                    <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+                        <Label text="Tamanho: " />
+                        <Label fx:id="lblImageSize" layoutX="10.0" layoutY="10.0" text="1920x1080" />
+                    </HBox>
+                    <HBox layoutX="10.0" layoutY="85.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+                        <Label text="Bytes: " />
+                        <Label fx:id="lblImageBytes" layoutX="10.0" layoutY="10.0" text="400k" />
+                    </HBox>
+                    <HBox layoutX="10.0" layoutY="110.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+                        <Label text="Orientação: " />
+                        <Label fx:id="lblOrientation" layoutX="10.0" layoutY="10.0" text="Retrato" />
+                    </HBox>
+                </VBox>
+                <VBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="200.0">
+                    <CheckBox fx:id="checkBox" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" />
+                    <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" VBox.vgrow="ALWAYS">
+                        <TextField fx:id="tfImageName" maxWidth="1.7976931348623157E308" />
+                    </VBox>
+                </VBox>
+            </children>
+         </HBox>
+          <HBox maxWidth="330.0" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0">
+              <Button maxHeight="-Infinity" maxWidth="240.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#defineAsDesktopImage" prefHeight="30.0" text="DEFINIR COMO PAPEL DE PAREDE" wrapText="true" HBox.hgrow="ALWAYS" />
+              <Button layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="80.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#save" prefHeight="30.0" text="SALVAR" HBox.hgrow="ALWAYS" />
+          </HBox>
+      </children>
+   </VBox>
+   <padding>
+      <Insets left="20.0" right="20.0" />
+   </padding>
 </HBox>

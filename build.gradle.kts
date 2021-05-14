@@ -12,6 +12,7 @@ repositories { mavenCentral() }
 
 dependencies {
     implementation(kotlin("stdlib"))
+    implementation("net.java.dev.jna:jna:5.8.0")
 
     val iKonliVersion = "12.0.0"
     val ikonliPackage = "org.kordamp.ikonli"

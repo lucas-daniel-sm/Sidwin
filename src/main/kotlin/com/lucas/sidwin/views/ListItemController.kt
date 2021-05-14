@@ -2,6 +2,7 @@ package com.lucas.sidwin.views
 
 import com.lucas.sidwin.files.FileHandler
 import com.lucas.sidwin.models.Wallpaper
+import com.lucas.sidwin.tools.DesktopWallpaperChanger
 import javafx.fxml.FXML
 import javafx.fxml.Initializable
 import javafx.scene.control.CheckBox
@@ -46,4 +47,7 @@ class ListItemController(private val wallpaper: Wallpaper) : Initializable {
 
     @FXML
     private fun save() = FileHandler.selectDirectoryAndSaveImages(listOf(wallpaper))
+
+    @FXML
+    private fun defineAsDesktopImage() = DesktopWallpaperChanger.setWallpaper(this.wallpaper.imageFile)
 }

@@ -1,5 +1,6 @@
 package com.lucas.sidwin
 
+import com.lucas.sidwin.views.BaseViewController
 import javafx.application.Application
 import javafx.application.Application.launch
 import javafx.fxml.FXMLLoader
@@ -14,6 +15,9 @@ class App : Application() {
         val baseViewLocation = "views/BaseView.fxml"
         val resource = javaClass.getResource(baseViewLocation)
         val fxmlLoader = FXMLLoader(resource)
+
+        fxmlLoader.setControllerFactory { BaseViewController(stage) }
+
         val scene = Scene(fxmlLoader.load(), null)
         stage.initStyle(StageStyle.TRANSPARENT)
         stage.scene = scene
