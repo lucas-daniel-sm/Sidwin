@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="600.0" prefWidth="900.0" styleClass="root" stylesheets="@../styles/main_style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lucas.sidwin.views.BaseViewController">
+    <MenuBar styleClass="pane">
+        <Menu mnemonicParsing="false" text="Imagens">
+            <MenuItem mnemonicParsing="false" onAction="#saveSelected" text="Salvar selecionados" />
+            <MenuItem mnemonicParsing="false" onAction="#saveAll" text="Salvar todos" />
+            <MenuItem mnemonicParsing="false" onAction="#close" text="Sair" />
+        </Menu>
+        <Menu mnemonicParsing="false" text="Filtro">
+            <MenuItem mnemonicParsing="false" onAction="#showAll" text="Mostrar todos" />
+            <MenuItem mnemonicParsing="false" onAction="#showPortrait" text="Mostrar apenas com orientação retrato" />
+            <MenuItem mnemonicParsing="false" onAction="#showLandscape" text="Mostrar apenas com orientação paisagem" />
+        </Menu>
+    </MenuBar>
+    <ListView fx:id="listView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" styleClass="pane" VBox.vgrow="ALWAYS" />
+</VBox>
