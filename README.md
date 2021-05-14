@@ -12,6 +12,10 @@
 ![](readme-assets/Captura%20de%20tela%20-%20Sidwin.png)
 > Janela do aplicativo.
 
+[
+  Clique aqui para fazer o download da aplicação
+](https://github.com/lucas-daniel-sm/Sidwin/releases/tag/1.0.0/ "Release 1.0.0")
+
 ---
 
 ### Configurações do ambiente:
@@ -27,3 +31,7 @@
 - Execute os seguintes comando:<br>
   ``` gradlew build ```
   ``` gradlew run ```
+
+### Instruções para criar instalador
+- Execute o seguinte comando:<br>
+  ``` gradlew jpackage ```
