@@ -5,8 +5,8 @@
 
 ### Funcionamento
 
-- Encontra e separa as imgens de destaque do
-  Windos 10 (As imagens que aparecem na tela de bloqueio) para que
+- Encontra e separa as imagens de destaque do
+  Windows 10 (As imagens que aparecem na tela de bloqueio) para que
   você possa salvá-las de forma fácil e rápida.
 
 ![](readme-assets/Captura%20de%20tela%20-%20Sidwin.png)
