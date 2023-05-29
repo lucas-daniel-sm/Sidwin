@@ -1,5 +1,5 @@
 # Sidwin
- Para salvar as imagens de destaque do Windows 10
+ Para <b>s</b>alvar as <b>i</b>magens de <b>d</b>estaque do <b>Win</b>dows 10
 
 ---
 
@@ -7,7 +7,7 @@
 
 - Encontra e separa as imagens de destaque do
   Windows 10 (As imagens que aparecem na tela de bloqueio) para que
-  você possa salvá-las de forma fácil e rápida.
+  você possa salvá-las ou definir como papel de parede de forma fácil e rápida.
 
 ![](readme-assets/Captura%20de%20tela%20-%20Sidwin.png)
 > Janela do aplicativo.
@@ -20,7 +20,7 @@
 
 ### Configurações do ambiente:
 
-- Windows 10
+- Windows 10 ou 11
 - JDK 14.0.2 ou superior
 - Gradle 6.3
 
