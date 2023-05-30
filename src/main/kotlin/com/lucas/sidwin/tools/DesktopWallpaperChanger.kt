@@ -17,10 +17,6 @@ object DesktopWallpaperChanger {
     }
 }
 
-fun main() {
-    DesktopWallpaperChanger.setWallpaper(Paths.get("I:\\lucas\\Desktop\\a.jpg"))
-}
-
 @Suppress("FunctionName")
 private interface User32Library : Library {
     fun SystemParametersInfo(one: Int, two: Int, s: String?, three: Int): Boolean
